@@ -1,25 +1,19 @@
 package fi.mariapori.rs3stats;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.AsyncDifferConfig;
-import androidx.recyclerview.widget.DiffUtil;
-
-import java.util.Objects;
-
 public class StatsObject {
-    private String Skill;
+    private RunescapeStats Skill;
     private int Level;
 
-    public StatsObject(String skill, int level) {
+    public StatsObject(RunescapeStats skill, int level) {
         Skill = skill;
         Level = level;
     }
 
     public String getSkill() {
-        return Skill;
+        return Skill.toString();
     }
 
-    public void setSkill(String skill) {
+    public void setSkill(RunescapeStats skill) {
         Skill = skill;
     }
 
