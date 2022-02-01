@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        stats.clear(); // Siivotaan lista ettei tule duplikaatteja
         setContentView(R.layout.activity_main);
         Button asetukset = (Button)findViewById(R.id.btnAsetukset);
         asetukset.setOnClickListener(v -> {
