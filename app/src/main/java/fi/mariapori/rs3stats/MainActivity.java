@@ -37,9 +37,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(switchActivityIntent);
         }else{
             statsList = (ListView) findViewById(R.id.statsList);
+            stats.clear(); // Siivotaan lista ettei tule duplikaatteja
             StatsAdapter adapter = new StatsAdapter(this,R.layout.stat,stats);
             statsList.setAdapter(adapter);
-
+            adapter.notifyDataSetChanged();
             RequestQueue queue = Volley.newRequestQueue(this);
             String url ="https://secure.runescape.com/m=hiscore/index_lite.ws?player=" + accountName;
             // Request a string response from the provided URL.
@@ -83,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        stats.clear(); // Siivotaan lista ettei tule duplikaatteja
+
         setContentView(R.layout.activity_main);
         Button asetukset = (Button)findViewById(R.id.btnAsetukset);
         asetukset.setOnClickListener(v -> {
@@ -96,8 +97,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(switchActivityIntent);
         }else{
             statsList = (ListView) findViewById(R.id.statsList);
+            stats.clear(); // Siivotaan lista ettei tule duplikaatteja
             StatsAdapter adapter = new StatsAdapter(this,R.layout.stat,stats);
             statsList.setAdapter(adapter);
+            adapter.notifyDataSetChanged();
 
             RequestQueue queue = Volley.newRequestQueue(this);
             String url ="https://secure.runescape.com/m=hiscore/index_lite.ws?player=" + accountName;
