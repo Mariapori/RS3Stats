@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(switchActivityIntent);
         }else{
             statsList = (ListView) findViewById(R.id.statsList);
+            statsList.setAdapter(null);
             stats.clear(); // Siivotaan lista ettei tule duplikaatteja
             StatsAdapter adapter = new StatsAdapter(this,R.layout.stat,stats);
             statsList.setAdapter(adapter);
@@ -97,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(switchActivityIntent);
         }else{
             statsList = (ListView) findViewById(R.id.statsList);
+            statsList.setAdapter(null);
             stats.clear(); // Siivotaan lista ettei tule duplikaatteja
             StatsAdapter adapter = new StatsAdapter(this,R.layout.stat,stats);
             statsList.setAdapter(adapter);
