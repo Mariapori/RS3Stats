@@ -37,13 +37,17 @@ public class StatsAdapter extends ArrayAdapter<StatsObject> {
         if (p != null) {
             TextView tt1 = (TextView) v.findViewById(R.id.lblSkill);
             TextView tt2 = (TextView) v.findViewById(R.id.lblLevel);
-
+            TextView tt3 = (TextView) v.findViewById(R.id.lblExp);
             if (tt1 != null) {
                 tt1.setText(p.getSkill());
             }
 
             if (tt2 != null) {
                 tt2.setText(String.valueOf(p.getLevel()));
+            }
+
+            if (tt3 != null) {
+                tt3.setText(String.valueOf(p.getExp()));
             }
 
         }
