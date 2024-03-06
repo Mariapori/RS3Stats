@@ -43,11 +43,11 @@ public class StatsAdapter extends ArrayAdapter<StatsObject> {
             }
 
             if (tt2 != null) {
-                tt2.setText(String.valueOf(p.getLevel()));
+                tt2.setText(String.valueOf(p.getLevel() + " lvl"));
             }
 
             if (tt3 != null) {
-                tt3.setText(String.valueOf(p.getExp()));
+                tt3.setText(String.valueOf(p.getExp() + " xp"));
             }
 
         }
