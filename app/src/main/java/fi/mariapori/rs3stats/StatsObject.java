@@ -1,5 +1,7 @@
 package fi.mariapori.rs3stats;
 
+import java.text.DecimalFormat;
+
 public class StatsObject {
     private RunescapeStats Skill;
     private int Level;
@@ -26,5 +28,10 @@ public class StatsObject {
 
     public void setLevel(int level) {
         Level = level;
+    }
+
+    public String ToHumanReadable(){
+        DecimalFormat decimalFormat = new DecimalFormat("#,##0.##");
+        return decimalFormat.format(Experience);
     }
 }

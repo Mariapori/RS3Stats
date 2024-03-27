@@ -47,7 +47,7 @@ public class StatsAdapter extends ArrayAdapter<StatsObject> {
             }
 
             if (tt3 != null) {
-                tt3.setText(String.valueOf(p.getExp() + " xp"));
+                tt3.setText(String.valueOf(p.ToHumanReadable() + " xp"));
             }
 
         }
